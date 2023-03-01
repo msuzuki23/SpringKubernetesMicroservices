@@ -51,15 +51,6 @@ services:
       - "8181"
     restart: on-failure
 
-  eureka:
-    build: eurekaserver
-    mem_limit: 512m
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-  #      - CONFIG_SERVER_USR=${CONFIG_SERVER_USR}
-  #      - CONFIG_SERVER_PWD=${CONFIG_SERVER_PWD}
-    restart: on-failure
-
   product:
     build: microservices/product-service
     mem_limit: 512m
